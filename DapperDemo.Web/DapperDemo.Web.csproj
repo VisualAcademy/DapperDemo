@@ -103,12 +103,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FrmCustomPagingWithDapper.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="FrmCustomPagingWithDapper.aspx.cs">
+      <DependentUpon>FrmCustomPagingWithDapper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCustomPagingWithDapper.aspx.designer.cs">
+      <DependentUpon>FrmCustomPagingWithDapper.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

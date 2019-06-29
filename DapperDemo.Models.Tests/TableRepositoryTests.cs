@@ -147,5 +147,43 @@ namespace DapperDemo.Models.Tests
         }
 
 
+
+        /// <summary>
+        /// 저장 프로시저의 OUTPUT 매개변수 테스트
+        /// </summary>
+        [TestMethod]
+        public void GetTablesNoteByIdWithOutput()
+        {
+            // Arrange
+            var repository = new TableRepository();
+
+            // Act
+            var note1 = repository.GetTablesNoteByIdWithOutput(1);
+            var note10 = repository.GetTablesNoteByIdWithOutput(10);
+
+            // Assert
+            Assert.AreEqual("홍길동1", note1);
+            Assert.AreEqual("홍길동10", note10);
+        }
+
+        //[TestMethod]
+        //public void SearchDateWithDate()
+        //{
+        //    var repository = new TableRepository();
+
+        //    var r = repository.SearchTablesByDate("2016-11-12", "2016-11-17");
+
+        //    Assert.AreEqual(true, r.Count > 3);
+        //}
+
+        [TestMethod]
+        public void IsExistNoteById_Test()
+        {
+            var repo = new TableRepository();
+
+            var r = repo.IsExistNoteById(1);
+
+            Assert.AreEqual(true, r); // 현재 시점에서는 통과
+        }
     }
 }
